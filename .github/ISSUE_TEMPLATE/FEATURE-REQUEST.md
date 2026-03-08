@@ -1,4 +1,9 @@
-# FEATURE: Name of the feature here
+---
+name: Feature request
+about: Share about your feature idea
+title: 'FEATURE: Name of the feature here'
+labels: enhancement
+---
 
 Summarize what the feature does/what it's for
 

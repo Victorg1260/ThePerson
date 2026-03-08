@@ -1,4 +1,9 @@
-# BUG/ISSUE: Issue title here (just a few words describing the bug)
+---
+name: Bug report
+about: Describe the bug to help us fix it
+title: 'BUG/ISSUE: Issue title here'
+labels: bug
+---
 
 Describe the issue in more depth here.
 
