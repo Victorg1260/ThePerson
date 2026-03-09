@@ -10,14 +10,32 @@ your creativity.
 
 ---
 
-## Contributions You Can Make
+## 📝 Table of Contents
+
+- [Contributions You Can Make](#contributions-you-can-make)
+
+
+- [Pull Request Steps](#pull-request-steps)
+- [Task Issues](#task-issues)
+- [Making Your First Contribution](#making-your-first-contribution)
+
+
+- [Code Guidelines](#code-guidelines)
+
+
+- [Reporting a Bug](#reporting-a-bug)
+- [Suggesting a Feature](#suggesting-a-feature)
+
+---
+
+## ✨ Contributions You Can Make
 
 There are many ways you can contribute: Adding a feature, fixing code, 
 finding and reporting bugs, improving documentation, and more!
 
 Any addition to the project will be very much appreciated, even small ones.
 
-### Steps
+## 👣 Pull Request Steps
 
 1. Create a fork of [the repository][repo]
 2. Clone the forked repository to your local machine
@@ -49,12 +67,18 @@ and polishes before approval.
 You should receive a notification/email once your changes have been merged 
 onto the main branch of this project.
 
-### Task Issues
+## 📋 Task Issues
 
 Some issues wil be opened in the [Issues tab][repo-issues] on GitHub, labeled 
-`task`. To complete the task described, follow the steps above to create a 
-fork and PR with your changes. 
+`task`. 
 
+If you are interested in completing a task: 
+- **Leave a comment requesting assignment under the issue**
+- Wait for a thumbs-up from a maintainer
+- Follow the steps above to create a fork and PR with your changes
+- Start coding!
+
+When writing the pull request:
 - Start the title the PR with `TASK: `.
 - In your PR description, **ensure you specify the issue number at the bottom**
 
@@ -80,12 +104,12 @@ Other issue-closing keywords you can use:
 * resolves
 * resolved
 
-### Making Your First Contribution
+## 🧰 Making Your First Contribution
 
 If you're new here or are not familiar with contributing to repositories on 
 GitHub, [here's a repo][first-contribs] with information that might help.
 
-### Code Guidelines
+## 🧭 Code Guidelines
 
 Here are **3 rules** I have with writing (Python) code:
 
@@ -151,10 +175,10 @@ add a little joke comment if your code starts to look sleep-inducing.
 
 ---
 
-## Reporting a Bug
+## 🐛 Reporting a Bug
 
 To report a bug or issue:
-1. On the repository on GitHub, go to the "[Issues][repo-issues]" tab.
+1. On the repository on GitHub, go to the [Issues][repo-issues] tab.
 2. Select "New issue"
 3. This is a tiny project, and I don't really have rules on how you should 
    write an issue report. Just include a descriptive title and helpful 
@@ -163,7 +187,7 @@ information in the description.
 
 ---
 
-## Suggesting a Feature
+## ☝️ Suggesting a Feature
 
 If you do not wish to code any features yourself, feel free to either open 
 an issue as described above, mentioning and explaining the new feature you 

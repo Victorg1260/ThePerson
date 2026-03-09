@@ -25,7 +25,17 @@ and a fun activity for experienced devs.
 
 Read [CONTRIBUTING.md](.github/CONTRIBUTING.md) to get started.
 
----
+## 📋 Completing tasks
+
+You can find tasks under the [Issues][repo-issues] tab on GitHub. These are 
+issues labeled `task` and are simple contributions you can make (good if you 
+are new). 
+
+If you are interested in completing a task: 
+- **Leave a comment requesting assignment under the issue**.
+- Wait for a thumbs-up from a maintainer
+- Give [CONTRIBUTING](.github/CONTRIBUTING.md) a read
+- Start coding!
 
 ## 💻 How to use
 
@@ -37,16 +47,12 @@ On the [GitHub page][repo]:
 3. Unzip the ZIP file on your machine.
 4. Extract any of the files in `src` to implement in your own projects!
 
----
-
 ## ❓ Questions/Requests
 
 If you have a question or something to say, open a discussion 
 [here][repo-disc], or leave a comment in an existing discussion.
 
----
-
-## License
+## 📜 License
 
 This project is licensed under the [MIT License](LICENSE.txt).
 
@@ -56,4 +62,5 @@ Like my project? [Drop me a star][repo]!
 
 [repo]: https://github.com/TheGittyPerson/ThePerson
 [repo-disc]: https://github.com/TheGittyPerson/ThePerson/discussions
+[repo-issues]: https://github.com/TheGittyPerson/ThePerson/issues
 [profile]: https://github.com/TheGittyPerson
