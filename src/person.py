@@ -12,7 +12,7 @@ class Person:
         
     def greet(self) -> None:
         """Do a simple greeting and introduction."""
-        Person.say(f"Hello! My name is {self.name}.")
+        self.say(f"Hello! My name is {self.name}.")
 
     @staticmethod
     def say(*args: object,
