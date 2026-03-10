@@ -1,3 +1,6 @@
+from typing import TextIO
+
+
 class Person:
     """A class to represent a person."""
     
@@ -18,7 +21,7 @@ class Person:
     def say(*args: object,
             sep: str | None = " ",
             end: str | None = "\n",
-            file = None,
+            file: TextIO | None = None,
             flush: bool = False) -> None:
         """Say a word, phrase, sentence or paragraph."""
         print(*args, sep=sep, end=end, file=file, flush=flush)
