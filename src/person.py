@@ -35,11 +35,13 @@ class Person:
         self.say(f"Hello! My name is {self.name}.")
 
     @staticmethod
-    def say(*args: object,
-            sep: str | None = " ",
-            end: str | None = "\n",
-            file: TextIO | None = None,
-            flush: bool = False) -> None:
+    def say(
+        *args: object,
+        sep: str | None = " ",
+        end: str | None = "\n",
+        file: TextIO | None = None,
+        flush: bool = False,
+    ) -> None:
         """Say a word, phrase, sentence or paragraph."""
         print(*args, sep=sep, end=end, file=file, flush=flush)
 
@@ -70,30 +72,42 @@ class Person:
 
         Raises:
             AttributeError: If the celebration day attribute does not exist.
+            TypeError: If the celebration date attribute is not a datetime or None.
         """
+        if not isinstance(day, str):
+            raise TypeError(f"'day' must be a string, got {type(day).__name__}")
+
         attr = f"{day}_date"
         if not hasattr(self, attr):
             raise AttributeError(
-                f"'{day}' is not a recognised celebration. "
-                f"Expected an attribute named '{attr}'."
+                f"'{day}' is not a recognised celebration "
+                f"(could not find attribute '{attr}')"
             )
 
         celebration_date: datetime | None = getattr(self, attr)
-        today = datetime.today()
 
-        default_message = message or f"Happy {day.capitalize()}, {self.name}! 🎉"
-        not_today_message = (
-            f"Today is not {self.name}'s {day} yet, but it's coming soon!"
+        if celebration_date is not None and not isinstance(celebration_date, datetime):
+            raise TypeError(
+                f"'{attr}' must be a datetime or None, "
+                f"got {type(celebration_date).__name__}"
+            )
+
+        today = datetime.today()
+        default_message = (
+            message or f"Happy {day.capitalize()}, {self.name}! 🎉"
         )
 
         if check_date:
-            if (
-                celebration_date is not None
-                and today.month == celebration_date.month
+            if celebration_date is None:
+                self.say(f"No date set for {self.name}'s {day} yet.")
+            elif (
+                today.month == celebration_date.month
                 and today.day == celebration_date.day
             ):
                 self.say(default_message)
             else:
-                self.say(not_today_message)
+                self.say(
+                    f"Today is not {self.name}'s {day} yet, but it's coming soon!"
+                )
         else:
             self.say(default_message)
