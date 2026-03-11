@@ -37,6 +37,11 @@ If you are interested in completing a task:
 - Give [CONTRIBUTING](.github/CONTRIBUTING.md) a read
 - Start coding!
 
+#### Note:
+Each task issue is labeled with its approximate difficulty level; to ensure 
+fair distribution of tasks amongst contributors, **please try to complete tasks 
+labeled with your level of coding experience only**
+
 ## 💻 How to use
 
 To try using the project yourself on your computer, follow these steps.
