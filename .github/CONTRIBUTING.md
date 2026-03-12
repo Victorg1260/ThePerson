@@ -80,7 +80,7 @@ onto the main branch of this project.
   and resolve conflicts (if any).
   - If you run into any trouble during conflict resolution, or are not sure 
     how to resolve a conflict, tag a maintainer/reviewer in an appropriate 
-    issue or PR comment section, or in a [Discussion][repo-disc], for help.
+    issue or PR comments section, or in a [Discussion][repo-disc], for help.
 - If you ever need to force-push, use `--force-with-lease` to prevent losing 
   any work.
 - Minimize how much code you touch outside what you are working on; change 
