@@ -1,5 +1,5 @@
 from typing import TextIO
-from datetime import datetime
+from datetime import date
 
 
 class Person:
@@ -12,10 +12,10 @@ class Person:
                  height: float | None = None,
                  nationality: str | None = None,
                  occupation: str | None = None,
-                 birthday_date: datetime | None = None,
-                 married_date: datetime | None = None,
-                 graduation_date: datetime | None = None,
-                 death_date: datetime | None = None, ) -> None:
+                 birthday_date: date | None = None,
+                 married_date: date | None = None,
+                 graduation_date: date | None = None,
+                 death_date: date | None = None, ) -> None:
         """Initialize the person's attributes."""
         self.name = name
         self.age = age
@@ -74,8 +74,7 @@ class Person:
 
         Raises:
             AttributeError: If the celebration day attribute does not exist.
-            TypeError: If the celebration date attribute is not a datetime or
-                       is None.
+            TypeError: If the celebration date attribute is not a date.
         """
         if not isinstance(day, str):
             raise TypeError(f"'day' must be a string, got {type(day).__name__}")
@@ -88,16 +87,16 @@ class Person:
                 f"(could not find attribute '{attr}')"
             )
 
-        celebration_date: datetime | None = getattr(person, attr)
+        celebration_date: date | None = getattr(person, attr)
 
         if (celebration_date is not None
-                and not isinstance(celebration_date, datetime)):
+                and not isinstance(celebration_date, date)):
             raise TypeError(
-                f"'{attr}' must be a datetime or None, "
+                f"'{attr}' must be a date or None, "
                 f"got {type(celebration_date).__name__}"
             )
 
-        today = datetime.today()
+        today = date.today()
         if target is not None:
             default_message = (
                 message or f"Happy {day.capitalize()}, {target.name}! "
