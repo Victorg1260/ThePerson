@@ -42,14 +42,15 @@ class Mood:
             ValueError: If the mood name is not recognised or intensity
                         is out of range.
         """
-        self.name = self._validate_name(name)
+        self.name = Mood._validate_name(name)
         self.intensity = self._validate_intensity(intensity)
 
     # ------------------------------------------------------------------
     # Private helpers
     # ------------------------------------------------------------------
 
-    def _validate_name(self, name: str) -> str:
+    @staticmethod
+    def _validate_name(name: str) -> str:
         """Validate and return the mood name.
 
         Args:
@@ -111,7 +112,7 @@ class Mood:
             name: The new mood name.
             intensity: The intensity of the new mood. Defaults to 0.5.
         """
-        self.name = self._validate_name(name)
+        self.name = Mood._validate_name(name)
         self.intensity = self._validate_intensity(intensity)
 
     def intensify(self, amount: float = 0.1) -> None:
