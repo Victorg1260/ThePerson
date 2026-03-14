@@ -18,13 +18,14 @@ labels: ['good first issue', 'help wanted', task]
 4. Push commits to your remote fork
 5. Create a PR titled `TASK: TASKTITLEHERE (#ISSUENUMBERHERE)`
 6. At the end of the PR description, add `Closes #ISSUENUMBERHERE`
-7. Submit the PR (Ensure you enable write access for code owners)
+7. Submit the PR (Ensure you allow maintainers to edit)
 8. _Optional: Request a review from a code owner_
 
-Please make sure you have read [CONTRIBUTING][contributing] before working.
+Please make sure you have read the [Contribution Guidelines][contrib] before 
+working.
 
 Feel free to ask any questions here.
 **Leave a comment** if you wish to work on this task!
 
-[contributing]: https://github.com/TheGittyPerson/ThePerson/blob/7ca2ee060799edced7722ce867d2cace53eac1e0/.github/CONTRIBUTING.md
+[contrib]: https://github.com/TheGittyPerson/ThePerson/blob/7ca2ee060799edced7722ce867d2cace53eac1e0/.github/CONTRIBUTING.md
 [pep-8]: https://peps.python.org/pep-0008/

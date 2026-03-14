@@ -23,7 +23,7 @@ and a fun activity for experienced devs.
   "hunger levels" to implementing a complex `dream()` system, the only limit is
   your imagination.
 
-Read [CONTRIBUTING.md](.github/CONTRIBUTING.md) to get started.
+Read our [Contribution Guidelines][contrib] to get started.
 
 ## 📋 Completing tasks
 
@@ -34,13 +34,38 @@ are new).
 If you are interested in completing a task: 
 - **Leave a comment requesting assignment under the issue**.
 - Wait for a thumbs-up from a maintainer
-- Give [CONTRIBUTING](.github/CONTRIBUTING.md) a read
+- Give our [Contribution Guidelines][contrib] a read
 - Start coding!
 
 #### Note:
 Each task issue is labeled with its approximate difficulty level; to ensure 
 fair distribution of tasks amongst contributors, **please try to complete tasks 
 labeled with your level of coding experience only**
+
+## 🤖 AI-Assisted Contributions
+
+In this repository, maintainers are expected to minimize the use of AI and 
+prioritize human interaction; other than in GitHub Actions workflows and 
+assissance in code reviews, all comments, review messages, task issues, and 
+documentation are written by human hands, ensuring any AI assisstance is 
+thoroughly reviewed and understood. 
+
+We expect the same from contributors and 
+discourage using AI as more than just a tool. (Read our [Code of Conduct][coc])
+
+AI tools can be helpful during development, and contributors are allowed to use
+them as **assistive tools**. However, this project does **not accept fully 
+automated or mass-generated contributions**.
+
+Pull requests that appear to be:
+- fully AI-generated,
+- automatically submitted to many repositories,
+- or lacking human oversight
+may be **closed without merging**.
+
+If you used AI assistance, please disclose it briefly in your PR description.
+
+Please read the [Contribution Guidelines][contrib] for more information.
 
 ## 💻 How to use
 
@@ -69,4 +94,6 @@ possible 🙏 (PLEASE 🙏🙏🙏)
 [repo]: https://github.com/TheGittyPerson/ThePerson
 [repo-disc]: https://github.com/TheGittyPerson/ThePerson/discussions
 [repo-issues]: https://github.com/TheGittyPerson/ThePerson/issues
+[contrib]: /.github/CONTRIBUTING.md
+[coc]: /.github/CODE_OF_CONDUCT.md
 [profile]: https://github.com/TheGittyPerson
