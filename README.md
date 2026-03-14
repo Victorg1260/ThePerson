@@ -50,12 +50,13 @@ labeled with your level of coding experience only**
 In the root directory of this repo, you will see `the_town.py`. Add yourself 
 as an instance of `Person`!
 
-Read [CONTRIBUTING](.github/CONTRIBUTING.md) to get started (Any PR not 
-following the guidelines under "The Town" will be closed).
+Read [CONTRIBUTING](.github/CONTRIBUTING.md) to get started. Any PR not 
+following the guidelines under "The Town" will be closed.
 
 ### 📖 Town Laws:
-- Only tamper with your own code
-- Don't change other townsfolk's attributes, etc.
+- Only edit your own code, even if you see a mistake someone made. That's their 
+  job to fix it.
+- Don't change, add, or remove other townsfolk's attributes or called methods.
 - Don't kill your neighbors (Don't remove `Person` instances other than your 
   own)
 

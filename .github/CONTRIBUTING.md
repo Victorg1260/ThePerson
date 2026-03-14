@@ -222,7 +222,7 @@ add a little joke comment if your code starts to look sleep-inducing.
 ## 🏡 The Town
 
 In the root directory of this repo, you will see `the_town.py`. Add yourself 
-as an instance of `Person` to be part of the town!
+as a `Person` instance to be part of the town!
 
 Pull request steps:
 1. Fork and clone this repository
@@ -237,8 +237,9 @@ You can also open a PR to update, change, or remove any of the code **you**
 added previously.
 
 ### 📜 Town Laws:
-- Only touch your own code
-- Don't change other townsfolk's attributes, etc.
+- Only edit your own code, even if you see a mistake someone made. That's their 
+  job to fix it.
+- Don't change, add, or remove other townsfolk's attributes or called methods.
 - Don't kill your neighbors (Don't remove `Person` instances other than your 
   own)
 
