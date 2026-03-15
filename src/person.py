@@ -2,9 +2,8 @@ from __future__ import annotations
 
 from typing import TextIO
 from datetime import date
-
+from goals import Goals
 from mood import Mood
-
 
 class Person:
     """A class to represent a person."""
@@ -33,6 +32,8 @@ class Person:
         self.death_date = death_date
         self.mood = Mood()
 
+        self.goals = Goals()
+        
     def greet(self) -> None:
         """Do a simple greeting and introduction."""
         self.say(f"Hello! My name is {self.name}.")
