@@ -1,4 +1,6 @@
-"""Module containing the Goal and Goals classes for tracking a person's goals."""
+"""
+Module containing the Goal and Goals classes for tracking a person's goals.
+"""
 
 from __future__ import annotations
 
@@ -24,11 +26,16 @@ class Goal:
             ValueError: If name is empty.
         """
         if not isinstance(name, str):
-            raise TypeError(f"Goal name must be a string, got {type(name).__name__}.")
+            raise TypeError(
+                f"Goal name must be a string, got {type(name).__name__}"
+            )
         if not name.strip():
-            raise ValueError("Goal name cannot be empty.")
+            raise ValueError("Goal name cannot be empty")
         if not isinstance(description, str):
-            raise TypeError(f"Description must be a string, got {type(description).__name__}.")
+            raise TypeError(
+                f"Description must be a string, got "
+                f"{type(description).__name__}"
+            )
 
         self.name = name.strip()
         self.description = description.strip()
@@ -56,7 +63,7 @@ class Goals:
     """A class to manage a collection of goals.
 
     Attributes:
-        goals: A list of Goal objects.
+        list: A list of Goal objects.
     """
 
     def __init__(self) -> None:
@@ -77,9 +84,13 @@ class Goals:
             The newly created Goal.
         """
         if not isinstance(name, str):
-            raise TypeError(f"Goal name must be a string, got {type(name).__name__}.")
+            raise TypeError(
+                f"Goal name must be a string, got {type(name).__name__}"
+            )
         if any(g.name.lower() == name.strip().lower() for g in self.list):
-            raise ValueError(f"Goal '{name}' already exists.")
+            raise ValueError(
+                f"Goal '{name}' already exists"
+            )
         goal = Goal(name, description)
         self.list.append(goal)
         return goal
@@ -154,7 +165,9 @@ class Goals:
             The matching Goal object.
         """
         if not isinstance(name, str):
-            raise TypeError(f"Goal name must be a string, got {type(name).__name__}.")
+            raise TypeError(
+                f"Goal name must be a string, got {type(name).__name__}"
+            )
         for goal in self.list:
             if goal.name.lower() == name.strip().lower():
                 return goal
@@ -165,5 +178,5 @@ class Goals:
         return self.summary()
 
     def __repr__(self) -> str:
-        """Return a detailed representation of the goals collection."""
+        """Return a detailed representation of the Goals collection."""
         return f"Goals(goals={self.list!r})"
