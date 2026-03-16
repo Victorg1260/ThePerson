@@ -1,0 +1,119 @@
+name: PR Guards
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+jobs:
+  naming:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const branch = pr.head.ref;
+            const title = pr.title || "";
+
+            if (pr.user && pr.user.type === "Bot") {
+              return;
+            }
+
+            const allowedPrefixes = [
+              "bugfix",
+              "fix",
+              "hotfix",
+              "feature",
+              "ui",
+              "docs",
+              "format",
+              "refact",
+              "wip",
+              "experiment",
+              "mix",
+              "misc",
+              "town",
+              "patch",
+            ];
+
+            if (!branch.includes("/")) {
+              core.setFailed(
+                "Branch name must include a prefix, e.g. 'feature/my-change'."
+              );
+              return;
+            }
+
+            const parts = branch.split("/");
+            const prefix = parts[0];
+            const rest = parts.slice(1).join("/").trim();
+
+            if (!allowedPrefixes.includes(prefix)) {
+              core.setFailed(
+                `Branch prefix '${prefix}' is not allowed. ` +
+                `Use one of: ${allowedPrefixes.join(", ")}.`
+              );
+              return;
+            }
+
+            if (!rest) {
+              core.setFailed(
+                "Branch name must include a name after the prefix, e.g. 'docs/readme-fix'."
+              );
+              return;
+            }
+
+            if (prefix === "town" && !rest.startsWith("add-")) {
+              core.setFailed(
+                "Town branches must be named like 'town/add-yourname'."
+              );
+              return;
+            }
+
+            if (title.startsWith("TASK:") && !/#\d+/.test(title)) {
+              core.setFailed(
+                "Task PR titles should include an issue number, " +
+                "e.g. 'TASK: Add feature (#123)'."
+              );
+            }
+
+  town_guard:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read
+      contents: read
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const branch = pr.head.ref;
+            const prefix = branch.split("/")[0];
+
+            if (pr.user && pr.user.type === "Bot") {
+              return;
+            }
+
+            if (prefix !== "town") {
+              return;
+            }
+
+            const { owner, repo } = context.repo;
+            const pull_number = pr.number;
+
+            const files = await github.paginate(
+              github.rest.pulls.listFiles,
+              { owner, repo, pull_number, per_page: 100 }
+            );
+
+            const invalid = files
+              .map((file) => file.filename)
+              .filter((name) => name !== "the_town.py");
+
+            if (invalid.length > 0) {
+              core.setFailed(
+                "Town PRs may only change 'the_town.py'. " +
+                `Unexpected files: ${invalid.join(", ")}.`
+              );
+            }
